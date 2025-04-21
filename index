@@ -1658,7 +1658,6 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                 <div id="resultadoNomina"></div>
             </div>
 
-
 <!-- Añadir estas subsecciones -->
 <div id="prefacturacion" class="subseccion">
 
@@ -1715,7 +1714,6 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             </div>
 
 
-
 </div>
 
 <div id="comparativo" class="subseccion">
@@ -1725,7 +1723,6 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 <div id="modificaciones" class="subseccion">
     <!-- Contenido completo de <section id="modificacion"> -->
 </div>
-
 
             <!-- Subsección de Facturación -->
             <div id="facturacion" class="subseccion">
@@ -2777,7 +2774,6 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
     <script>
 
-
         let tarifas = JSON.parse(localStorage.getItem("tarifas")) || [];
 	let trabajadores = JSON.parse(localStorage.getItem("trabajadores")) || [];
         let registrosJornadas = JSON.parse(localStorage.getItem("registrosJornadas")) || [];
@@ -2846,8 +2842,6 @@ function generarContraseñaSegura() {
     }
     return contraseña;
 }
-
-
 
         // Cerrar sesión
         function cerrarSesion() {
@@ -2991,7 +2985,6 @@ function abrirModalEditarTrabajador(index) {
     // Mostrar el modal
     document.getElementById("modalEditarTrabajador").style.display = "flex";
 }
-
 
 // Manejar la subida de la foto en el modal de edición
 document.getElementById("fotoTrabajador").addEventListener("change", function () {
@@ -3266,7 +3259,6 @@ document.getElementById("editarJornadaForm").addEventListener("submit", function
     cerrarModalEditarJornada();
 });
        
-
  function cerrarModalEditarJornada() {
             document.getElementById("modalEditarJornada").style.display = "none";
         }
@@ -3306,7 +3298,6 @@ function abrirModalEditarUsuario(index) {
     document.getElementById("editarAccessoTarifas").checked = usuario.accessoTarifas;
     document.getElementById("editarAccessoSedes").checked = usuario.accessoSedes;
     document.getElementById("modalEditarUsuario").style.display = "flex";
-
 
             document.getElementById("modalEditarUsuario").style.display = "flex";
         }
@@ -3376,7 +3367,6 @@ inputFoto.addEventListener("change", function () {
 });
 function registrarTrabajador() {
 
-
     const camposObligatorios = [
         "nombreApellidos", "correoElectronico", "tipoDocumento", 
         "numeroDocumento", "fechaNacimiento", "rh", "genero", 
@@ -3405,11 +3395,8 @@ function registrarTrabajador() {
         return; // Detener la ejecución si el número de documento ya existe
     }
 
-
-
     const fechaNacimientoInput = document.getElementById("fechaNacimiento");
 
-    
     // Validar la edad antes de continuar
     if (!validarEdad(fechaNacimientoInput)) {
         return; // Detener la ejecución si la validación falla
@@ -3427,7 +3414,6 @@ function registrarTrabajador() {
         return; // Detener la ejecución si la edad es menor a 18
     }
 
-
 let capacitacionesRecibidas = {
         capacitacion1: document.getElementById("capacitacion1").checked,
         capacitacion2: document.getElementById("capacitacion2").checked,
@@ -3440,8 +3426,6 @@ let capacitacionesRecibidas = {
         capacitacion9: document.getElementById("capacitacion9").checked,
         capacitacion10: document.getElementById("capacitacion10").checked,
     };
-
-
 
 let documentosRecibidos = {
         documento1: document.getElementById("documento1").checked,
